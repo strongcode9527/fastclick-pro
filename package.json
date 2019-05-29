@@ -1,0 +1,25 @@
+{
+  "name": "fastclick-pro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/cjs.js",
+  "module": "./dist/es.js",
+  "scripts": {
+    "build:es": "rollup ./src/fastclick.js --file dist/es.js --format esm",
+    "build:cjs": "rollup ./src/fastclick.js --file dist/cjs.js --format cjs",
+    "build": "npm run build:es && npm run build:cjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/strongcode9527/fastclick-pro.git"
+  },
+  "author": "strong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/strongcode9527/fastclick-pro/issues"
+  },
+  "homepage": "https://github.com/strongcode9527/fastclick-pro#readme",
+  "dependencies": {
+    "rollup": "^1.12.4"
+  }
+}
