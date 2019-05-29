@@ -6,11 +6,16 @@
 - 实例，直接挂载到fastclick本身
 
 ```
+// a.js
 
-fastclick.attach(document.body)
+import fastclick from 'fastclick';
+fastclick.attach(document.body);
 
+// b.js
+
+import fastclick from 'fastclick';
 // 直接在这里使用fastclick的自身方法，支持在其他的文件直接import并且使用
-fastclick.instance.destroy()
+fastclick.instance.destroy();
 
 ```
 
