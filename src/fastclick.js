@@ -777,5 +777,7 @@ FastClick.notNeeded = function(layer) {
  * @param {Object} [options={}] The options to override the defaults
  */
 FastClick.attach = function(layer, options) {
-  return new FastClick(layer, options);
+  const instance = FastClick(layer, options);
+  FastClick.instance = instance;
+  return instance;
 };
