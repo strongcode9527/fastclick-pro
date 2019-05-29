@@ -5,8 +5,8 @@
   "main": "./dist/cjs.js",
   "module": "./dist/es.js",
   "scripts": {
-    "build:es": "rollup ./src/fastclick.js --file dist/es.js --format esm",
-    "build:cjs": "rollup ./src/fastclick.js --file dist/cjs.js --format cjs",
+    "build:es": "cross-env ROLLUP_FORMAT=es rollup -c",
+    "build:cjs": "cross-env ROLLUP_FORMAT=cjs rollup -c",
     "build": "npm run build:es && npm run build:cjs"
   },
   "repository": {
@@ -19,7 +19,12 @@
     "url": "https://github.com/strongcode9527/fastclick-pro/issues"
   },
   "homepage": "https://github.com/strongcode9527/fastclick-pro#readme",
-  "dependencies": {
-    "rollup": "^1.12.4"
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "cross-env": "^5.2.0",
+    "rollup": "^1.12.4",
+    "rollup-plugin-babel": "^4.3.2"
   }
 }

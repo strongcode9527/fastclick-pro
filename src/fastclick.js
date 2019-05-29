@@ -1,4 +1,6 @@
-import { isTypeElement, deviceIsAndroid, deviceIsIOS, deviceIsIOS4, deviceIsIOSWithBadTarget, deviceIsBlackBerry10 } from '../utils/index.js'
+import utils from '../utils/index.js'
+
+const { isClient, isTypeElement, deviceIsAndroid, deviceIsIOS, deviceIsIOS4, deviceIsIOSWithBadTarget, deviceIsBlackBerry10 } = utils();
 
 /**
  * @preserve FastClick: polyfill to remove click delays on browsers with touch UIs.
@@ -777,6 +779,9 @@ FastClick.notNeeded = function(layer) {
  * @param {Object} [options={}] The options to override the defaults
  */
 FastClick.attach = function(layer, options) {
+  if(!isClient) {
+    return false;
+  }
   const instance = FastClick(layer, options);
   FastClick.instance = instance;
   return instance;
