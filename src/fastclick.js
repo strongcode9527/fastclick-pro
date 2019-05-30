@@ -782,7 +782,7 @@ FastClick.attach = function(layer, options) {
   if(!isClient) {
     return false;
   }
-  const instance = FastClick(layer, options);
+  const instance = new FastClick(layer, options);
   FastClick.instance = instance;
   return instance;
 };
