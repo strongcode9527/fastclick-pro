@@ -7,7 +7,8 @@
   "scripts": {
     "build:es": "cross-env ROLLUP_FORMAT=es rollup -c",
     "build:cjs": "cross-env ROLLUP_FORMAT=cjs rollup -c",
-    "build": "npm run build:es && npm run build:cjs"
+    "build": "npm run build:es && npm run build:cjs",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
