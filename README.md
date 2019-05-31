@@ -1,4 +1,14 @@
 # fastclick-pro
+
+```
+
+npm i fastclick-pro
+or 
+yarn add fastclick-pro
+
+
+```
+
 优化fastclick的问题
 
 - input和textarea的光标问题
