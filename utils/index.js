@@ -1,5 +1,5 @@
 export default function utils() {
-  const isClient= !!window
+  const isClient= typeof window !== 'undefined'
   if(!isClient) {
     return {
       isClient: false,
